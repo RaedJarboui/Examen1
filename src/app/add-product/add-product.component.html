@@ -1,0 +1,43 @@
+<div>
+    <h1>Create User</h1>
+    <form [formGroup]="form" (ngSubmit)="productService.addProduct(form.value)" >
+        
+        
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" formControlName="name" class="form-control">
+            <div *ngIf="name.valid" class="alert alert-success">
+                name success
+              </div>
+             
+        </div>
+        <div class="form-group">
+            <label>price</label>
+            <input type="text" formControlName="price" class="form-control">
+            <div *ngIf="price.valid" class="alert alert-success">
+                price success
+              </div>
+              <div *ngIf="price.invalid" class="alert alert-danger">
+                <div *ngIf="price.touched &&(price.touched || price.dirty)" class="alert alert-danger">
+                    price doit contenir nombres
+                          </div>
+              </div>
+        </div>
+        <div class="form-group">
+            <label>description</label>
+            <input type="text" formControlName="description" class="form-control">
+            <div *ngIf="description.valid" class="alert alert-success">
+                description success
+              </div>
+              <div *ngIf="description.invalid" class="alert alert-danger">
+                <div *ngIf="description.touched &&(description.touched || description.dirty)" class="alert alert-danger">
+                    description doit contenir au minimum 10 caractres.   
+                          </div>
+              </div>
+        </div>
+       
+
+
+        <button type="submit" [disabled]="form.invalid">Submit</button>
+    </form>
+</div>

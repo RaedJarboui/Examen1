@@ -1,0 +1,6 @@
+<div *ngFor="let product of products">
+    ProductName : {{product.name}}
+    Price : {{product.price}}
+    <button (click)="productService.addcart(product.id)">Buy</button>
+    <button [routerLink]="[product.id]">Details</button>
+</div>

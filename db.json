@@ -1,0 +1,30 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": 1,
+      "price": "json-server",
+      "description": "typicode"
+    },
+    {
+      "name": "raed",
+      "price": "11",
+      "description": "aaaaaaaaaa",
+      "id": 2
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "name": 1,
+      "price": "json-server",
+      "description": "typicode"
+    },
+    {
+      "name": "raed",
+      "price": "11",
+      "description": "aaaaaaaaaa",
+      "id": 2
+    }
+  ]
+}
